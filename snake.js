@@ -173,8 +173,8 @@ function generateMousePosition() {
 
 function createMouse() {
     const pos = generateMousePosition();
-    // Prüfen, ob diese Maus golden sein soll (nach 5 gegessenen normalen Mäusen)
-    const isGolden = miceEatenSinceLastGolden >= 5;
+    // Prüfen, ob diese Maus golden sein soll (nach 4 gegessenen normalen Mäusen)
+    const isGolden = miceEatenSinceLastGolden >= 4;
     
     // Wenn die Maus golden ist, resetten wir den Zähler
     if (isGolden) {
