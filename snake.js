@@ -18,8 +18,8 @@ let expansionDirection = 'top'; // Startet mit Erweiterung nach oben
 // Zähler für gefressene Mäuse seit der letzten goldenen Maus
 let miceEatenSinceLastGolden = 0;
 
-// Maximale Anzahl der Mäuse festlegen
-const MAX_MICE = 10;
+// Maximale Anzahl der Mäuse festlegen - von 10 auf 20 erhöht
+const MAX_MICE = 20;
 
 // Tracking der Spielfeldposition relativ zum Viewport
 let fieldOffsetX = 0;
@@ -219,9 +219,9 @@ function startGame() {
                     // Resette nextGoldenMousePoints auf 1
                     nextGoldenMousePoints = 1;
                     
-                    // Bei 6 bis 10 Mäusen wird der Mäusezähler auf 5 zurückgesetzt
-                    if (mouseCounter > 5) {
-                        mouseCounter = 5;
+                    // Bei mehr als 10 Mäusen wird der Mäusezähler auf 10 zurückgesetzt (statt 5)
+                    if (mouseCounter > 10) {
+                        mouseCounter = 10;
                     }
                 }
                 
